@@ -1,0 +1,32 @@
+package com.nh.limit.common.entity;
+
+import com.nh.limit.system.entity.Menu;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @Classname MenuTree
+ * @Description TODO
+ * @Date 2019/10/14 11:37 AM
+ * @Created by nihui
+ */
+@Data
+public class MenuTree<T> implements Serializable {
+    private String id;
+    private String icon;
+    private String href;
+    private String title;
+    private Map<String, Object> state;
+    private boolean checked = false;
+    private Map<String, Object> attributes;
+    private List<MenuTree<T>> childs = new ArrayList<>();
+    private String parentId;
+    private boolean hasParent = false;
+    private boolean hasChild = false;
+
+    private Menu data;
+}

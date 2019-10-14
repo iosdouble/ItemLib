@@ -1,5 +1,6 @@
 package com.nh.limit.common.authentication;
 
+import com.nh.limit.system.entity.Menu;
 import com.nh.limit.system.entity.Role;
 import com.nh.limit.system.entity.User;
 import com.nh.limit.system.service.IMenuService;
@@ -57,9 +58,11 @@ public class ShiroRealm extends AuthorizingRealm {
 
 
         //获取用户权限集合
+        List<Menu> permissionList = this.menuService.findUserPermissions(userName);
+        Set<String> permissionSet = permissionList.stream().map(Menu::getPerms).collect(Collectors.toSet());
+        simpleAuthorizationInfo.setStringPermissions(permissionSet);
 
-
-        return null;
+        return simpleAuthorizationInfo;
     }
 
     /**
