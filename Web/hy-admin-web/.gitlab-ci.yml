@@ -1,0 +1,18 @@
+stages:
+  - deploy
+
+job deploy:
+  cache:
+    paths:
+      - node_modules/
+  before_script:
+    - pwd
+    - cnpm install
+  stage: deploy
+  script: cnpm run build:prod 
+  after_script:
+    - pwd
+    - if [ -d /app/weblogic/hy-admin-web/dist/ ] ; then  mv /app/weblogic/hy-admin-web/dist /app/weblogic/hy-admin-web/dist$(date "+%Y%m%d%H%M") ; fi
+    - mv dist /app/weblogic/hy-admin-web/
+  only:
+    - master
