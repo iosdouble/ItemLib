@@ -24,7 +24,7 @@ spring:
 # Mybatis 增强配置
 mybatis-plus:
   # 配置扫描实体类包
-  type-aliases-package:
+  type-aliases-package: com.nh.limit.system.entity
   # Mapper 本地映射路径
   mapper-locations: classpath:mapper/*/*.xml
   configuration:

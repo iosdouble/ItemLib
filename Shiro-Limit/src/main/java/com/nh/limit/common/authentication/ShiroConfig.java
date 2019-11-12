@@ -1,18 +1,22 @@
 package com.nh.limit.common.authentication;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.nh.limit.common.properties.FebsProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.RememberMeManager;
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.session.SessionListener;
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.crazycake.shiro.RedisCacheManager;
 import org.crazycake.shiro.RedisManager;
+import org.crazycake.shiro.RedisSessionDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +24,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.Base64Utils;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 
 /**
@@ -98,7 +104,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/**","user");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-        return null;
+        return shiroFilterFactoryBean;
     }
 
     @Bean
@@ -151,13 +157,40 @@ public class ShiroConfig {
         return authorizationAttributeSourceAdvisor;
     }
 
+
     /**
-     * Cookie 管理对象
+     * 用于开启 Thymeleaf 中的 shiro 标签的使用
+     *
+     * @return ShiroDialect shiro 方言对象
+     */
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
+    }
+
+
+    @Bean
+    public RedisSessionDAO redisSessionDAO() {
+        RedisSessionDAO redisSessionDAO = new RedisSessionDAO();
+        redisSessionDAO.setRedisManager(redisManager());
+        return redisSessionDAO;
+    }
+
+    /**
+     * Session 管理对象
      *
      * @return
      */
     private SessionManager sessionManager() {
-        return null;
+        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
+        Collection<SessionListener> listeners = new ArrayList<>();
+        listeners.add(new ShiroSessionListener());
+        // 设置 session超时时间
+        sessionManager.setGlobalSessionTimeout(febsProperties.getShiro().getSessionTimeout() * 1000L);
+        sessionManager.setSessionListeners(listeners);
+        sessionManager.setSessionDAO(redisSessionDAO());
+        sessionManager.setSessionIdUrlRewritingEnabled(false);
+        return sessionManager;
     }
 
 

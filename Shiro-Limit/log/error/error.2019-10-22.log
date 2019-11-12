@@ -1,0 +1,38 @@
+2019-10-22 17:17:09 ERROR main org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field redisService in com.nh.limit.common.runner.FebsStartedUpRunner required a bean of type 'com.nh.limit.monitor.service.IRedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.nh.limit.monitor.service.IRedisService' in your configuration.
+
+2019-10-22 17:24:17 ERROR main org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jedisPool in com.nh.limit.monitor.service.impl.RedisServiceImpl required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2019-10-22 17:26:53 ERROR http-nio-8080-exec-1 org.crazycake.shiro.RedisSessionDAO read session error. settionId=69d6033b-edaf-405e-8cf6-8b83d3764adb
+2019-10-22 17:26:53 ERROR http-nio-8080-exec-2 org.crazycake.shiro.RedisSessionDAO read session error. settionId=69d6033b-edaf-405e-8cf6-8b83d3764adb

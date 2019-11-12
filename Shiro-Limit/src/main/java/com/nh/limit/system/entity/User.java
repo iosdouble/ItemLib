@@ -14,6 +14,7 @@ import lombok.Data;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -25,7 +26,7 @@ import java.util.Date;
 @Data
 @TableName("t_user")
 @Excel("用户信息表")
-public class User {
+public class User implements Serializable {
 
 
     // 用户状态：有效

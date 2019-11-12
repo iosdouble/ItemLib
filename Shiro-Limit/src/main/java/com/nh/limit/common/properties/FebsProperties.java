@@ -16,6 +16,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:febs.properties")
 @ConfigurationProperties(prefix = "febs")
 public class FebsProperties {
+
     private ShiroProperties shiro = new ShiroProperties();
     private boolean autoOpenBrowser = true;
     private String[] autoOpenBrowserEnv = {};
