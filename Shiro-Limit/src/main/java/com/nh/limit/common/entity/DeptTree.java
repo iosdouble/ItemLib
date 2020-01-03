@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * @Classname DeptTree
- * @Description TODO
+ * @Description TODO 部门树
  * @Date 2019/10/30 2:30 PM
  * @Created by nihui
  */

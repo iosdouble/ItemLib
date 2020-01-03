@@ -10,7 +10,7 @@ import java.text.ParseException;
 
 /**
  * @Classname TimeConverter
- * @Description TODO
+ * @Description TODO 时间转换器
  * @Date 2019/10/12 10:19 AM
  * @Created by nihui
  */

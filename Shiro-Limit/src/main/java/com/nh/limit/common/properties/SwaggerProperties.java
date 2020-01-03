@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @Classname SwaggerProperties
- * @Description TODO
+ * @Description TODO Swagger 配置类封装
  * @Date 2019/10/12 9:44 AM
  * @Created by nihui
  */

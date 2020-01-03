@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * @Classname FebsProperties
- * @Description TODO
+ * @Description TODO Febs 配置
  * @Date 2019/10/12 9:41 AM
  * @Created by nihui
  */

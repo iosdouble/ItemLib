@@ -2,7 +2,7 @@ package com.nh.limit.common.entity;
 
 /**
  * @Classname RegexpConstant
- * @Description TODO
+ * @Description TODO 正则表达式
  * @Date 2019/10/12 10:16 AM
  * @Created by nihui
  */

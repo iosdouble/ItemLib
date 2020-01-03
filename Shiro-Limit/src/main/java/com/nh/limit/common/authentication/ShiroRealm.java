@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 /**
  * @Classname ShiroRealm
- * @Description TODO
+ * @Description TODO Shiro Realm 封装类
  * @Date 2019/10/12 10:01 AM
  * @Created by nihui
  */

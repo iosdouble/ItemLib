@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 /**
  * @Classname FebsResponse
- * @Description TODO
+ * @Description TODO 响应信息封装
  * @Date 2019/10/22 4:17 PM
  * @Created by nihui
  */

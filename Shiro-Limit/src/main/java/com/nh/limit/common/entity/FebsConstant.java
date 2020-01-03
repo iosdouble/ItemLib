@@ -4,8 +4,9 @@ import com.nh.limit.common.controller.BaseController;
 
 /**
  * 常量
+ * @TODO 常量池功能
  *
- * @author MrBird
+ * @author nihui
  */
 public class FebsConstant {
 

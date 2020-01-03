@@ -1,0 +1,4 @@
+2019-11-12 19:00:20 ERROR http-nio-8080-exec-9 com.nh.limit.common.utils.AddressUtil 获取地址信息异常，null
+2019-11-12 19:02:10 ERROR http-nio-8080-exec-4 com.nh.limit.common.utils.AddressUtil 获取地址信息异常，null
+2019-11-12 19:05:15 ERROR http-nio-8080-exec-3 com.nh.limit.common.utils.AddressUtil 获取地址信息异常，null
+2019-11-12 19:05:57 ERROR http-nio-8080-exec-10 com.nh.limit.common.utils.AddressUtil 获取地址信息异常，null

@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 
 /**
  * @Classname ControllerEndpointAspect
- * @Description TODO
+ * @Description TODO AOP 加入控制器的Endpoint
  * @Date 2019/10/30 3:05 PM
  * @Created by nihui
  */

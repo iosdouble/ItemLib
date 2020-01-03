@@ -10,7 +10,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * @Classname RedisConfigure
- * @Description TODO
+ * @Description TODO Redis 缓存配置
  * @Date 2019/10/22 5:25 PM
  * @Created by nihui
  */

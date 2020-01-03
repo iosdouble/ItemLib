@@ -31,7 +31,7 @@ import java.util.LinkedHashMap;
 
 /**
  * @Classname ShiroConfig
- * @Description TODO
+ * @Description TODO Shiro 权限配置类
  * @Date 2019/10/11 3:53 PM
  * @Created by nihui
  */

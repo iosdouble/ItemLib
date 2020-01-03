@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @Classname ShiroProperties
- * @Description TODO
+ * @Description TODO Shiro 配置类封装
  * @Date 2019/10/11 3:55 PM
  * @Created by nihui
  */

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * @Classname ControllerEndpoint
- * @Description TODO
+ * @Description TODO 控制器EndPoint
  * @Date 2019/10/11 3:30 PM
  * @Created by nihui
  */

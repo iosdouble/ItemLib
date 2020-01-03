@@ -9,8 +9,8 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
- * @Classname MobileValidator
- * @Description TODO
+ * @Classname Mobile Validator
+ * @Description TODO 电话号码检查
  * @Date 2019/10/12 10:14 AM
  * @Created by nihui
  */

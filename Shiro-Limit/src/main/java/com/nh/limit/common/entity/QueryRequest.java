@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * @Classname QueryRequest
- * @Description TODO
+ * @Description TODO 请求参数封装
  * @Date 2019/10/12 10:42 AM
  * @Created by nihui
  */

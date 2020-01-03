@@ -2,7 +2,7 @@ package com.nh.limit.common.entity;
 
 /**
  * @Classname LimitType
- * @Description TODO
+ * @Description TODO 权限类型
  * @Date 2019/10/11 3:48 PM
  * @Created by nihui
  */
